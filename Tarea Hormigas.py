@@ -367,10 +367,8 @@ while (longitudMínima > longitudMínimaDeseada) and (iIteración < 250):
 arregloTrayectoMásCorto = np.array([ int(x) for x in trayectoMásCorto ])
 
 #Se guarda en el archivo de texto caminoMásCorto_SH
-archivoResultado = open("caminoMásCorto_SH.txt", "w")
-np.savetxt(archivoResultado, arregloTrayectoMásCorto, fmt ='%1.3i' , newline=',\n')
-    
-archivoResultado.close()
+
+np.savetxt("caminoMásCorto_SH.txt", arregloTrayectoMásCorto, fmt ='%1.3i' , newline=',\n')
 
 #Se imprime la longitud del camino más corto
 print('La longitud del camino más corto encontrado es de: ', longitudMínima)
